@@ -312,6 +312,9 @@ export default {
       const periodEnd = this.$moment(this.min).startOf(this.isWeekPeriod ? 'jWeek' : 'jMonth')
       return this.min.isValid() && periodEnd.isAfter(newDate)
     },
+    notCurrentMonth (day) {
+      return !day.isSame(this.currentDate, 'month') && !this.isWeekPeriod && !this.hideMonthShadow
+    },
     addPeriod () {
       if (this.isAfterMax()) return
       this.transitionAction = 'slide-left'
@@ -357,7 +360,7 @@ export default {
         'vpc_day': true,
         'vpc_today': today && !this.disableToday,
         'vpc_past': day.isSameOrBefore(this.$moment(), 'day') && !today && !this.hidePastDaysShadow,
-        'vpc_not-current-month': !day.isSame(this.currentDate, 'month') && !this.isWeekPeriod && !this.hideMonthShadow,
+        'vpc_not-current-month': this.notCurrentMonth(day),
         'vpc_week-period-day': this.isWeekPeriod,
         'vpc_day-disable': disable
       }
@@ -458,17 +461,13 @@ export default {
       
       if (add_diff.isBefore(e, 'day')) return diff + 1
       return diff
-      //const diff = e.diff(s, 'day')
-      //if (parseInt(e.format('jD')) > parseInt(s.format('jD'))) return parseInt(e.format('jD')) - parseInt(s.format('jD'))
     },
     emitDay (day, $event) {
-      if (this.disablePastDays) {
-        if (!day.isBefore(this.$moment(), 'day')) {
-          this.$emit('on-day-click', day)
-        } else {
-          $event.stopPropagation()
-        }
+      $event.stopPropagation()
+      if (this.notCurrentMonth(day)) {
+        return
       }
+      this.$emit('on-day-click', day)
     }
   }
 }

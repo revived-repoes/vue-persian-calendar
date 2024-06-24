@@ -67,7 +67,6 @@ export default {
   methods: {
     addEvent (day) {
       this.id += 1
-      // console.log(day.format())
       this.events.push({
         id: this.id,
         title: 'test',
