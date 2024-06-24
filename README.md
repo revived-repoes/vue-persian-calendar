@@ -3,9 +3,9 @@
 
 ## Preview images
 
-![alt text](https://github.com/aminmokhtari94/vue-persian-calendar/blob/master/preview_images/month.png?raw=true)
+![alt text](https://github.com/revived-repoes/vue-persian-calendar/blob/master/preview_images/month.png?raw=true)
 
-![alt text](https://github.com/aminmokhtari94/vue-persian-calendar/blob/master/preview_images/week.png?raw=true)
+![alt text](https://github.com/revived-repoes/vue-persian-calendar/blob/master/preview_images/week.png?raw=true)
 
 ## Installation
 

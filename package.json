@@ -1,6 +1,6 @@
 {
-  "name": "vue-persian-calendar",
-  "version": "0.4.1",
+  "name": "@revived-repoes/vue-persian-calendar",
+  "version": "0.5.1",
   "private": false,
   "main": "dist/persian-calendar.umd.js",
   "browser": {
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aminmokhtari94/vue-persian-calendar.git"
+    "url": "git+https://github.com/revived-repoes/vue-persian-calendar.git"
   },
   "description": "A Persian Calendar with Events viewer for Vue.js",
   "bugs": {
-    "url": "https://github.com/aminmokhtari94/vue-persian-calendar/issues"
+    "url": "https://github.com/revived-repoes/vue-persian-calendar/issues"
   },
-  "homepage": "https://github.com/aminmokhtari94/vue-persian-calendar#readme",
+  "homepage": "https://github.com/revived-repoes/vue-persian-calendar#readme",
   "keywords": [
     "persian-calendar",
     "vue-calendar",
@@ -22,9 +22,10 @@
     "persan-date",
     "vuejs",
     "vue.js",
-    "vue calendar"
+    "vue calendar",
+    "revived-repo"
   ],
-  "author": "Amin Mokhtari",
+  "author": "Revive Repo",
   "license": "ISC",
   "files": [
     "dist/*",
