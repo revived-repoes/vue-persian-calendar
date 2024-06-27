@@ -329,7 +329,7 @@ export default {
     },
     goToday () {
       if (this.todayBtnDisable) return
-      this.$emit('on-today-click', this.$moment)
+      this.$emit('on-today-click', this.$moment())
       if (this.currentDate.isBefore(this.$moment(), 'month') || (this.isWeekPeriod && this.currentDate.isBefore(this.$moment().startOf('jWeek')))) {
         this.transitionAction = 'slide-left'
         this.currentDate = this.$moment()
